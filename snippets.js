@@ -38,7 +38,7 @@ console.log(
   ])
 );
 
-// Remove adjacent duplicates with 'k' length
+// Remove adjacent duplicates with 'k' length, lc 1209
 // [[a: 1], [b:2]]
 function removeDupsEqualsk(str, k) {
   const stack = [];
