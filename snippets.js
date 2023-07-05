@@ -53,8 +53,21 @@ function removeDupsEqualsk(str, k) {
   }
   let finalStr = "";
   for (let [key, value] of stack) {
-     finalStr = finalStr + key.repeat(value)
+    finalStr = finalStr + key.repeat(value);
   }
   return finalStr;
 }
 console.log(removeDupsEqualsk("deeedbbcccbdaa", 3));
+
+// Min value to get positive step by step sum, so that minmum is not less than 1 LC 1413
+function minValue(arr) {
+  let min = 1,
+    sum = 0;
+  for (let num of arr) {
+    sum += num;
+    min = Math.min(sum, min);
+  }
+  if (min === 1) return 1;
+  else return min * -1 + 1;
+}
+console.log(minValue([-3, -2, -3, 4, 2]));
