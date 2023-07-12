@@ -85,11 +85,11 @@ function bitCount(n) {
 console.log(bitCount(00000000000000000000000010000000));
 
 // Missing number, LC 268
-function missingCount(arr) {
+function missingNumber(arr) {
   let curr = arr.length;
   for (let i = 0; i < arr.length; i++) {
     curr = curr ^ i ^ arr[i];
   }
   return curr;
 }
-console.log(missingCount([0, 1, 2, 3, 5]));
+console.log(missingNumber([0, 1, 2, 3, 5]));
