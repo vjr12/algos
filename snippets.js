@@ -71,3 +71,25 @@ function minValue(arr) {
   else return min * -1 + 1;
 }
 console.log(minValue([-3, -2, -3, 4, 2]));
+
+// Number of 1 bits LC 191
+function bitCount(n) {
+  let count = 0;
+  while (n !== 0) {
+    let isOne = n & 1;
+    if (isOne === 1) count++;
+    n = n >>> 1;
+  }
+  return count;
+}
+console.log(bitCount(00000000000000000000000010000000));
+
+// Missing number, LC 268
+function missingCount(arr) {
+  let curr = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    curr = curr ^ i ^ arr[i];
+  }
+  return curr;
+}
+console.log(missingCount([0, 1, 2, 3, 5]));
